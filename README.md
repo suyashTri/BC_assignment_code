@@ -1,121 +1,17 @@
-Readme
-This is the readme for this project. It will include any useful links and commands to run.
+Step 1: Copy the project id of your infura account and paste it in .env file as INFURA_TOKEN
 
-Install Visual Studio Code
-https://code.visualstudio.com/Download
+Step 1: Run npm i to install all the dependencies of the node module
 
-Install Git
-get a github account at github.com
+Step 2: Copy the Deployed Contracts code in remix IDE.
 
-install git locally
+Step 3: Compile the code and deploy it in Injected Web3 Environment
 
-https://github.com/git-guides/install-git
+Step 4: Copy the contract address and paste it into the .env file as CONTRACT_ADDRESS
 
-Install NodeJs
-Install following the instructions at the following web page:
+Step 5: Copy the account address and paste it into the .env file as OWNER_ADDRESS
 
-https://nodejs.org/en/download/
+Step 6: Export private key from your metamask account and paste it in .env file as SUPER_SECRET_PRIVATE_KEY
 
-Cloning a Repository
-Create a folder for your college projects. Go into that folder.
+Step 7: Write the  MetaMask wallet address of all the accounts where tokens needs to be distribute in accounts.txt
 
-Inside that college folder, run:
-
-git clone https://github.com/eoinco/nci_2021.git
-
-Updating Code in Repo from Github
-From the terminal in Visual Studio Code (or from the command line - as long as you are in the folder), run the following command:
-
-git pull origin main
-
-for the moment
-you need git, nodejs and vs code installed.
-
-Validation Steps
-How to tell you have git installed:
-
-$git version
-
-How to tell you have node installed:
-
-$node -v
-
-Using your own repo
-First, create a repo in github.
-
-git clone into a folder
-
-make your changes
-
-then run the following commands:
-
-$git add <your updated files>
-
-$git commit -m "<your commit message>"
-
-$git push origin main
-
-Executing a .JS file
-To execute a javascript file using node.js, run the following command:
-
-$node <file name>
-
-Dependencies and NPM
-We want to use large chunks of code that others have written to interact with Ethereum, like the web3 package. Do this, we need to set up the Node Package Manager (npm).
-
-From inside your folder, to create your own package.json:
-
-$npm init
-
-CURL accessing of handlers"
-To POST to a route, execute the following CURL command:
-
-curl -XPOST http://localhost:8080/transfer -H 'content-type: application/json' -d '{"account_to": "0x4d60E7f9d4901816981a0E4c6D95F394159C6371", "amount": "123000"}'
-
-Docker
-View running docker containers
-docker ps
-
-build a docker container
-docker build -t nci/lab2021 .
-
-run the image
-docker run -p 8090:8080 --name nci -d nci/lab2021
-
-kill a running container
-docker kill [name]
-
-start/stop a container
-docker start/stop [name]
-
-view logs
-docker logs [name]
-
-view logs inside a container
-docker logs -f [name]
-
-view images on your computer
-docker image ls
-
-clear the docker system
-docker system prune -f
-
-remove all docker images
-docker image prune -a -f
-
-run docker-compose
-docker-compose up
-
-to run it in detached mode:
-
-docker-compose up -d
-
-Requirements for Assignment
-1. create an ethereum account
-This is completed inside metamask (12 words, create an account, fund with Ropsten ether)
-
-2. Create an ERC20-compliant, fixed-supply token
-using open zeppelin contract,
-
-3. Deply to Ropsten
-deploying using injected web3 and metamask
+Step 8: Run node distribute.js in the terminal to send 5% of the tokens to all the listed accounts evenly.
